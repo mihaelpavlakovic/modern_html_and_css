@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <!-- action attribute is where the form will be submitted -->
+  <form action="process.php">
+    <!-- Text Input -->
+    <div>
+      <!-- for attribute (label element) is used with id attribute (input element): when we click label input field will automatically highlight -->
+      <label for="name">Name</label><br>
+      <!-- name attribute: on the server-side, we grab it to get the value that's written inside the input field -->
+      <!-- value attribute: fills the input with a given value -->
+      <input type="text" name="name" id="name" value="John Doe">
+    </div>
+    <!-- Email Input -->
+    <div>
+      <label for="email">Email</label><br>
+      <!-- placeholder attribute: shows in the input placeholder text -->
+      <input type="email" name="email" id="email" placeholder="Enter an email">
+    </div>
+    <!-- Textarea Input -->
+    <div>
+      <label for="message">Message</label><br>
+      <!-- textarea element: represents a multi-line plain-text editing control -->
+      <!-- cols and rows represent how many of them we want to show -->
+      <textarea name="message" id="message" cols="50" rows="5"></textarea>
+    </div>
+    <!-- Select Input -->
+    <div>
+      <label for="sex">Sex</label>
+      <select name="sex" id="sex">
+        <option value="male">Male</option>
+        <!-- selected attribute: selects specific option value when page loads -->
+        <option value="female" selected>Female</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <!-- Number Input -->
+    <div>
+      <label for="age">Age</label><br>
+      <input type="number" name="age" id="age">
+    </div>
+    <!-- Date Input -->
+    <div>
+      <label for="birthdate">Birthdate</label><br>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+    <!-- Radio Input -->
+    <div>
+      <label for="membership">Membership</label>
+      <input type="radio" name="membership" id="membership" value="simple">Simple
+      <!-- checked attribute: selects specific radio/checkbox value when page loads -->
+      <input type="radio" name="membership" id="membership" value="standard" checked>Standard
+      <input type="radio" name="membership" id="membership" value="super">Super
+    </div>
+    <!-- Checkbox Input -->
+    <div>
+      <label for="membership">I Like...</label>
+      <input type="checkbox" name="likes" id="likes" value="bike">Bike
+      <input type="checkbox" name="likes" id="likes" value="car">Car
+      <input type="checkbox" name="likes" id="likes" value="boat">Boat
+    </div>
+    <!-- Input Submit -->
+    <input type="submit" value="Submit">
+    <!-- Button Submit -->
+    <button type="submit">Submit</button>
+    <!-- Reset Button -->
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
